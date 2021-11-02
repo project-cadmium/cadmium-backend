@@ -43,8 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    # third party
+    # THIRD PARTY
+    #   1.utils
     'safedelete',
+    'django_seed',
+
+    #   2.auth
     'rest_framework',
     'rest_framework.authtoken',
     'allauth',
@@ -52,6 +56,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'dj_rest_auth',
     'dj_rest_auth.registration',
+
+    #   3.docs
     'drf_yasg',
 
 
