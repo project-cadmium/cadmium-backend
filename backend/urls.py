@@ -24,7 +24,7 @@ schema_view = get_schema_view(
         title="Cadmium Backend API",
         default_version="v1",
         description="Part of project cadium",
-        terms_of_service="https://github.com/c3n7/dhurabini-backend/blob/main/COPYING",
+        terms_of_service="https://github.com/project-cadmium/cadmium-backend/blob/main/LICENSE.txt",
         contact=openapi.Contact(email="kartimothy@gmail.com"),
         license=openapi.License(name="AGPL-3.0-or-later"),
     ),
@@ -42,6 +42,7 @@ urlpatterns = [
 
     # apps
     path('api/v1/instructors/', include('instructors.urls')),
+    path('api/v1/courses/', include('courses.urls')),
 
     # docs
     path('swagger/', schema_view.with_ui(
