@@ -1,6 +1,9 @@
 from django.core.management.base import BaseCommand
+
 from users.seeder import seed as seed_users
+
 from instructors.seeder import seed as seed_instructors
+from courses.seeder import CourseSeeder
 
 
 class Command(BaseCommand):
@@ -14,5 +17,10 @@ class Command(BaseCommand):
         print(inserted, end='\n\n')
 
         print('Instructors')
-        inserted = seed_instructors(30)
-        print(inserted)
+        inserted = seed_instructors(50)
+        print(inserted, end='\n\n')
+
+        print('Courses')
+        sd = CourseSeeder()
+        inserted = sd.seed(30)
+        print(inserted, end='\n\n')
