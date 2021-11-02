@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 
-class Parent(models.Model):
+class Instructor(models.Model):
     user_id = models.OneToOneField(
         get_user_model(), on_delete=models.PROTECT)
     biography = models.TextField()
