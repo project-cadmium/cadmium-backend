@@ -22,5 +22,5 @@ class Command(BaseCommand):
 
         print('Courses')
         sd = CourseSeeder()
-        inserted = sd.seed(30)
+        inserted = sd.seed(300)
         print(inserted, end='\n\n')

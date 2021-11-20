@@ -10,7 +10,7 @@ class CourseSeeder:
 
     def gen_instructor(self, seeder, student_ids):
         student_id = seeder.faker.random_elements(
-            student_ids, length=1, unique=True)
+            student_ids, length=1, unique=False)
 
         student_id = student_id[0]
         student = Instructor.objects.get(id=student_id)
