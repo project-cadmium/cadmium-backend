@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     #   1.utils
     'safedelete',
     'django_seed',
+    'filters',
 
     #   2.auth
     'rest_framework',
