@@ -13,3 +13,16 @@ class CourseSerializer(serializers.ModelSerializer):
             'created_at',
             'updated_at',
         )
+
+
+class ChapterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Course
+        fields = (
+            'id',
+            'course_id',
+            'name',
+            'description',
+            'created_at',
+            'updated_at',
+        )
